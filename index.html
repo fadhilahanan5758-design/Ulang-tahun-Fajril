@@ -1,10 +1,11 @@
-<!doctype html>
+    <!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Surprise untukmu 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#000000;
@@ -13,25 +14,64 @@
       --muted:#b9b2a8;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Montserrat,system-ui,Arial;background:linear-gradient(180deg,var(--bg),#071022);color:#e6eef6;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden}
-    .wrap{width:100%;max-width:960px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+    body{
+      margin:0;
+      font-family:Montserrat,system-ui,Arial;
+      background:linear-gradient(180deg,var(--bg),#071022);
+      color:#e6eef6;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
 
-    header{display:flex;gap:20px;align-items:center}
-    .logo{width:78px;height:78px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#ffd1dc);display:flex;align-items:center;justify-content:center;font-weight:800;color:#0b1220;font-size:28px}
-    h1{margin:0;font-size:26px}
-    p.lead{color:var(--muted);margin:6px 0 0}
+    .wrap{
+      width:100%;
+      max-width:960px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      position:relative;
+      overflow:hidden;
+    }
 
-    .grid{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:22px}
-    .card{background:var(--card);padding:18px;border-radius:12px}
-    .hero{display:flex;flex-direction:column;gap:12px}
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+    .logo{
+      width:78px;
+      height:78px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#ffd1dc);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color:#0b1220;
+      font-size:28px;
+    }
+    h1{
+      margin:0;
+      font-size:26px;
+    }
+    p.lead{
+      color:var(--muted);
+      margin:6px 0 0;
+    }
 
-    .message{font-size:18px;line-height:1.45}
-    .typewriter{display:inline-block;border-right:2px solid rgba(230,238,246,0.15);padding-right:6px}
+    .message{
+      margin-top:20px;
+      font-size:18px;
+      line-height:1.55;
+    }
 
-    .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-    .photos img{width:100%;height:100px;object-fit:cover;border-radius:8px;display:block}
-
-    /* NEW: glitter + stars + floating hearts */
+    /* Floating glitter & hearts */
     .glitter, .star, .heartFloat {
       position:absolute;
       pointer-events:none;
@@ -43,10 +83,28 @@
       50% {opacity:1;}
       100% {transform:translateY(-200px) scale(1); opacity:0;}
     }
-
   </style>
 </head>
+
 <body>
+
+  <div class="wrap">
+    <header>
+      <div class="logo">✨</div>
+      <div>
+        <h1>Selamat Ulang Tahun, Fajril 💖</h1>
+        <p class="lead">Ada sedikit kejutan digital untukmu 🎁</p>
+      </div>
+    </header>
+
+    <div class="message">
+      Hai kamu ✨<br><br>
+      Hari ini spesial banget, jadi aku mau ngasih sesuatu yang kecil tapi tulus.  
+      Semoga kamu suka ya 💗  
+      <br><br>
+      Terima kasih sudah jadi pribadi baik, lucu, dan penuh warna di hidup banyak orang.
+    </div>
+  </div>
 
   <script>
     function spawnFloating(elementClass, emoji){
