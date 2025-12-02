@@ -1,130 +1,201 @@
-    <!doctype html>
+    <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Surprise untukmu 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Untuk Fajril — Dari Aku</title>
 
-  <style>
-    :root{
-      --bg:#000000;
-      --card:#1a1a1a;
-      --accent:#c8a27a;
-      --muted:#b9b2a8;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Montserrat,system-ui,Arial;
-      background:linear-gradient(180deg,var(--bg),#071022);
-      color:#e6eef6;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      position:relative;
-      overflow:hidden;
-    }
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #cfe9ff, #89caff);
+    overflow-x: hidden;
+    color: #003a70;
+}
 
-    .wrap{
-      width:100%;
-      max-width:960px;
-      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-      border-radius:18px;
-      padding:28px;
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);
-      position:relative;
-      overflow:hidden;
-    }
+/* Animasi glitter */
+.glitter {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: glitterMove 3s linear infinite;
+    opacity: 0.7;
+}
+@keyframes glitterMove {
+    from { transform: translateY(-10vh) translateX(0); opacity: 1; }
+    to { transform: translateY(110vh) translateX(20px); opacity: 0; }
+}
 
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-    }
-    .logo{
-      width:78px;
-      height:78px;
-      border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),#ffd1dc);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:800;
-      color:#0b1220;
-      font-size:28px;
-    }
-    h1{
-      margin:0;
-      font-size:26px;
-    }
-    p.lead{
-      color:var(--muted);
-      margin:6px 0 0;
-    }
+/* Container utama */
+.container {
+    padding: 30px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
 
-    .message{
-      margin-top:20px;
-      font-size:18px;
-      line-height:1.55;
-    }
+/* Judul */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
 
-    /* Floating glitter & hearts */
-    .glitter, .star, .heartFloat {
-      position:absolute;
-      pointer-events:none;
-      animation: floatUp 6s linear infinite;
-      opacity:0.8;
-    }
-    @keyframes floatUp {
-      0% {transform:translateY(40px) scale(0.5); opacity:0;}
-      50% {opacity:1;}
-      100% {transform:translateY(-200px) scale(1); opacity:0;}
-    }
-  </style>
+/* Cerita */
+.story {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25px;
+    line-height: 1.7;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Pesan rahasia */
+.secret {
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+    line-height: 1.8;
+}
+.revealBtn {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #0066c8;
+    color: white;
+    font-size: 16px;
+}
+
+/* Teka-teki */
+.riddleBox {
+    margin-top: 35px;
+    padding: 18px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.6);
+}
+input {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+}
+.answerBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00509e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="wrap">
-    <header>
-      <div class="logo">✨</div>
-      <div>
-        <h1>Selamat Ulang Tahun, Fajril 💖</h1>
-        <p class="lead">Ada sedikit kejutan digital untukmu 🎁</p>
-      </div>
-    </header>
+<!-- Glitter anim -->
+<script>
+for (let i = 0; i < 60; i++) {
+    let g = document.createElement("div");
+    g.className = "glitter";
+    g.style.left = Math.random() * 100 + "vw";
+    g.style.animationDelay = Math.random() * 5 + "s";
+    g.style.opacity = Math.random();
+    document.body.appendChild(g);
+}
+</script>
 
-    <div class="message">
-      Hai kamu ✨<br><br>
-      Hari ini spesial banget, jadi aku mau ngasih sesuatu yang kecil tapi tulus.  
-      Semoga kamu suka ya 💗  
-      <br><br>
-      Terima kasih sudah jadi pribadi baik, lucu, dan penuh warna di hidup banyak orang.
+<div class="container">
+    <h1>Happy Birthday, Fajril 💙</h1>
+    <p>Ada sesuatu yang ingin aku sampaikan hari ini...</p>
+
+    <div class="story">
+        <h2>✨ Cerita Kita ✨</h2>
+        <p>
+        Kita ketemu tanggal <b>16 Februari 2025</b> di Telegram…  
+        Ketemu tanpa sengaja, tanpa rencana, dan tanpa persiapan apa pun.  
+        Tapi justru di situlah semua mulai terasa berarti.  
+        </p>
+
+        <p>
+        Kita melewati hari-hari dengan telfon panjang, cerita random, ketawa kecil,
+        kadang curhat capek hidup, kadang cuma diem tapi tetap nyaman.  
+        Kita ngobrol sampai malam, mungkin karena… ya kita sama-sama pengangguran waktu itu hehe.
+        </p>
+
+        <p>
+        Terus karena HP-ku rusak, aku pindah WA ke HP bapak.  
+        Tidak nyaman, tapi kamu tetap ada untukku.  
+        Dan begitu HP-ku sudah jadi lagi, aku pakai HP ini untuk selamanya —  
+        untuk terus nyambung sama kamu tanpa putus.
+        </p>
+
+        <p>
+        Kalau boleh jujur… setiap hari aku makin sayang kamu.  
+        Aku mencintaimu selamanya.  
+        Dan aku merindukanmu — lebih dari yang bisa aku tulis di sini.
+        </p>
     </div>
-  </div>
 
-  <script>
-    function spawnFloating(elementClass, emoji){
-      setInterval(()=>{
-        const el=document.createElement('div');
-        el.className=elementClass;
-        el.textContent=emoji;
-        el.style.left=Math.random()*100+'vw';
-        el.style.top='100vh';
-        el.style.fontSize=(20+Math.random()*20)+'px';
-        el.style.animationDuration=(4+Math.random()*4)+'s';
-        document.body.appendChild(el);
-        setTimeout(()=>el.remove(),8000);
-      },700);
+    <button class="revealBtn" onclick="document.getElementById('secret').style.display='block'; this.style.display='none'">
+        Lihat pesan rahasia 💌
+    </button>
+
+    <div id="secret" class="secret">
+        <h3>💙 Pesan Rahasia untuk Fajril 💙</h3>
+        <p>
+        Kamu adalah orang yang datang tanpa aku minta,  
+        tapi justru jadi seseorang yang aku butuhkan.  
+        Kamu bikin aku merasa aman, dihargai, dan didengar.  
+        Kamu bukan cuma seseorang yang aku suka—  
+        kamu rumahnya hati aku.
+        </p>
+
+        <p>
+        Terima kasih karena sudah hadir.  
+        Terima kasih karena tetap tinggal.  
+        Terima kasih karena masih memilih aku.  
+        Aku mencintaimu tanpa batas waktu,  
+        tanpa jeda, tanpa ragu.
+        </p>
+    </div>
+
+    <div class="riddleBox">
+        <h3>💫 Teka-teki Untuk Kamu</h3>
+        <p>
+            Aku punya sesuatu, tapi tidak bisa kamu lihat.  
+            Kamu bisa merasakannya, tapi tidak bisa kamu pegang.  
+            Kamu membawanya setiap hari, bahkan saat kamu jauh.  
+            Apa itu?
+        </p>
+
+        <input id="jawaban" placeholder="Jawab di sini..." />
+        <button class="answerBtn" onclick="cek()">Cek Jawaban</button>
+
+        <p id="hasil" style="margin-top:10px; font-weight:bold;"></p>
+    </div>
+</div>
+
+<script>
+function cek() {
+    const j = document.getElementById("jawaban").value.toLowerCase();
+    const h = document.getElementById("hasil");
+
+    if (j.includes("cinta") || j.includes("love") || j.includes("sayang")) {
+        h.innerHTML = "Benar 💙 Itu cinta aku ke kamu.";
+    } else {
+        h.innerHTML = "Belum tepat, coba pikirkan lagi bub 🩵";
     }
-
-    spawnFloating('heartFloat','💖');
-    spawnFloating('glitter','✨');
-    spawnFloating('star','⭐');
-  </script>
+}
+</script>
 
 </body>
-</html>
+    </html>
+    
